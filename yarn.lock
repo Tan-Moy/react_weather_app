@@ -2068,7 +2068,7 @@ lru-cache@2:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952"
 
-marker-clusterer-plus@^2.1.4:
+marker-clusterer-plus@^2.1.2:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/marker-clusterer-plus/-/marker-clusterer-plus-2.1.4.tgz#f8eff74d599dab3b7d0e3fed5264ea0e704f5d67"
 
@@ -2532,22 +2532,24 @@ react-dom@^0.14.3:
   version "0.14.9"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.14.9.tgz#05064a3dcf0fb1880a3b2bfc9d58c55d8d9f6293"
 
-react-google-maps@^4.11.0:
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/react-google-maps/-/react-google-maps-4.11.0.tgz#077a7d937685b5ff359d0b6ebb54505adec68712"
+react-google-maps@4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/react-google-maps/-/react-google-maps-4.7.1.tgz#ac03d9edda4503aaf2de15c8e3aa390afd0df47b"
   dependencies:
     can-use-dom "^0.1.0"
     google-maps-infobox "^1.1.13"
     invariant "^2.1.1"
     lodash.isequal "^3.0.4"
-    marker-clusterer-plus "^2.1.4"
-    react-prop-types-element-of-type "^2.1.0"
+    marker-clusterer-plus "^2.1.2"
+    react-prop-types-element-of-type "^1.0.2"
     scriptjs "^2.5.8"
     warning "^2.1.0"
 
-react-prop-types-element-of-type@^2.1.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-prop-types-element-of-type/-/react-prop-types-element-of-type-2.2.0.tgz#bcc332d3903c2259cf68c28a81c4a663faba59ac"
+react-prop-types-element-of-type@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-prop-types-element-of-type/-/react-prop-types-element-of-type-1.0.2.tgz#7f5e23fb9a9125005a231fc50097860b5fb97006"
+  dependencies:
+    invariant "^2.2.0"
 
 react-redux@^4.0.0:
   version "4.4.8"
