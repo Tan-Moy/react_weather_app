@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+// hook to action creator
+import {fetchWeather} from '../actions/index'
 
-export default class SearchBar extends Component{
+class SearchBar extends Component{
     constructor (props){
         super(props);
 
@@ -19,11 +23,14 @@ export default class SearchBar extends Component{
 
     onFormSubmit(e){
         e.preventDefault();
+        //getting weather data/call the action creator
+        this.props.fetchWeather(this.state.term);
+        this.setState({term:""});
     }
 
     render(){
         return(
-            <from onSubmit={this.onFormSubmit} className='input-group'>
+            <form onSubmit={this.onFormSubmit} className='input-group'>
                 <input
                 className="form-control"
                 placeholder = "Get a five day forecast"
@@ -32,7 +39,16 @@ export default class SearchBar extends Component{
                 <span className="input-group-btn">
                     <button type="submit" className="btn btn-secondary">Submit</button>
                 </span>
-            </from>
+            </form>
         );
     }
 }
+
+//getting access to action creator
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({fetchWeather},dispatch)
+}
+
+//connecting container/promoted component searchbar through mapDispatch
+export default connect(null,mapDispatchToProps)(SearchBar);
+//null = this container has no need of the application state maintained by redux
